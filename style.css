@@ -67,15 +67,24 @@ h3 {
     padding:20px;
     margin-bottom:30px;
     border-radius:10px;
-    transition: all 0.3s ease;
+    transition: all 0.5s ease;
     display:flex;
     flex-direction: row;
     align-items: flex-start;
+    opacity: 0;
+    transform: translateY(20px);
 }
 
+/* Fade-in animation */
+.card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Hover più dinamico */
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0,255,255,0.3);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(0,255,255,0.4);
 }
 
 /* Testo nelle card */
@@ -134,4 +143,32 @@ footer {
         margin-left:0;
         margin-top:10px;
     }
+}
+
+/* Accordion sottosezioni */
+.accordion {
+    cursor: pointer;
+    background-color: rgba(0,255,255,0.1);
+    color: #00ffff;
+    padding: 10px;
+    margin:5px 0;
+    border:none;
+    text-align:left;
+    outline:none;
+    font-size:16px;
+    transition:0.3s;
+    border-radius:5px;
+}
+
+.accordion:hover {
+    background-color: rgba(0,255,255,0.2);
+}
+
+.panel {
+    padding: 0 10px;
+    display: none;
+    background-color: rgba(0,255,255,0.05);
+    overflow: hidden;
+    margin-bottom:10px;
+    border-radius:5px;
 }
