@@ -1,0 +1,137 @@
+body {
+    margin:0;
+    font-family: Arial, sans-serif;
+    background:#0a0f2c;
+    color:#e0f7fa;
+    display:flex;
+}
+
+/* Menu laterale fisso */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 220px;
+    height: 100%;
+    background: #111837;
+    padding-top: 20px;
+    display:flex;
+    flex-direction:column;
+    z-index: 100;
+}
+
+nav a {
+    color: #00ffff;
+    text-decoration: none;
+    padding: 12px 20px;
+    margin: 5px 0;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    background:#1a2466;
+    color:#66ffff;
+}
+
+/* Contenuto principale */
+.main-content {
+    margin-left: 240px;
+    padding: 40px;
+    flex: 1;
+}
+
+/* Titoli */
+h1 {
+    color:#00ffff;
+    text-align:center;
+    margin-bottom:30px;
+}
+
+h2 {
+    color:#00ffff;
+    margin-top:0;
+    margin-bottom:10px;
+}
+
+h3 {
+    color:#66ffff;
+    margin-top:15px;
+}
+
+/* Card / mini-articoli */
+.card {
+    background: rgba(17,24,55,0.9);
+    border-left: 6px solid #00ffff;
+    padding:20px;
+    margin-bottom:30px;
+    border-radius:10px;
+    transition: all 0.3s ease;
+    display:flex;
+    flex-direction: row;
+    align-items: flex-start;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,255,255,0.3);
+}
+
+/* Testo nelle card */
+.card .text {
+    flex:1;
+}
+
+.card img {
+    width:200px;
+    height:auto;
+    margin-left:20px;
+    border-radius:8px;
+}
+
+/* Sfondo leggermente diverso per ogni sezione */
+#introduzione { background: rgba(0,128,128,0.05); }
+#prerequisiti { background: rgba(0,255,255,0.05); }
+#conoscenze { background: rgba(0,128,255,0.05); }
+#abilita { background: rgba(0,255,128,0.05); }
+
+/* Footer */
+footer {
+    text-align:center;
+    padding:20px;
+    margin-top:20px;
+    background:#111837;
+    color:#00ffff;
+    border-top:1px solid #00ffff;
+}
+
+/* Info personali */
+.header-info {
+    text-align:center;
+    margin:30px 0;
+    color:#00ffff;
+}
+
+/* Responsive */
+@media(max-width: 900px){
+    nav {
+        width: 100%;
+        height:auto;
+        position: relative;
+        flex-direction: row;
+        justify-content: center;
+    }
+    .main-content {
+        margin-left:0;
+        padding:20px;
+    }
+    .card {
+        flex-direction: column;
+    }
+    .card img {
+        width:100%;
+        margin-left:0;
+        margin-top:10px;
+    }
+}
